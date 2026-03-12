@@ -5,15 +5,15 @@
 inputDir = getDirectory("Select the INPUT folder");                       
 outputDir = getDirectory("Select the OUTPUT folder");
 
-// Corrected error-checking for empty paths
+// Corrected error-checking for empty paths... 
 if (inputDir == "" || lengthOf(inputDir) == 0 || outputDir == "" || lengthOf(outputDir) == 0) 
     exit("Macro canceled: No folder selected.");
 
-// Prompt for results filename suffix
+// Prompt for adding results filename suffix
 suffix = getString("Enter a suffix for the results file:", "mysuffix");   
 if (suffix == "") exit("No suffix entered, macro canceled.");
 
-// Prompt for threshold ranges for three masks using a dialog
+// Prompt for determining threshold ranges for three masks using a dialog
 Dialog.create("Threshold Ranges for 3 Masks");
 Dialog.addMessage("Enter HSB min/max for each mask:");
 Dialog.addMessage("Mask 1:");
@@ -52,7 +52,7 @@ b3_min = Dialog.getNumber(); b3_max = Dialog.getNumber();
 //}
 //if (firstFile == "") exit("No .tif images found in the input folder.");
 
-// ** PREVIEW Stage **
+// ** PREVIEW Stage... Super annoying; can delete **
 //open(inputDir + firstFile);
 //origTitle = getTitle();
 //run("Duplicate...", "title=Preview"); 
